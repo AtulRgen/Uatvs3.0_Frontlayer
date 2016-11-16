@@ -3108,8 +3108,7 @@ var teststepfortester = {
                         flagResult = true;
                     }
                 }
-
-
+                
                 if (teststepfortester.childListResult[i]["TCID"] != "") {
                     var tcId = teststepfortester.childListResult[i]["TCID"]
                     var _filesId1 = ServiceLayer.GetData('GetExpectedAttachmentIDbyTCID', tcId, 'TestingPg');
