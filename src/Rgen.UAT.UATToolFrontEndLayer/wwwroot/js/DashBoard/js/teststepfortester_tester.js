@@ -3109,6 +3109,19 @@ var teststepfortester = {
                     }
                 }
 
+
+                if (teststepfortester.childListResult[i]["TCID"] != "") {
+                    var tcId = teststepfortester.childListResult[i]["TCID"]
+                    var _filesId1 = ServiceLayer.GetData('GetExpectedAttachmentIDbyTCID', tcId, 'TestingPg');
+                    if (_filesId1 != null && _filesId1 != undefined && _filesId1.length > 0) {
+                        for (var j = 0; j < _filesId1.length; j++) {
+                           
+                            teststepfortester.preview2(_filesId1[j].ids);
+                         
+                        }
+                    }
+                }
+
                 /* comment by Atul.s
                                 if (teststepfortester.childListResult[i]['actAttachment1'] != '' && teststepfortester.childListResult[i]['actAttachment1'] != undefined) {
                                     actCount++;
@@ -3337,7 +3350,9 @@ var teststepfortester = {
     },
     preview2: function (filepath) {
         var filesHtml;
-
+        $("#preview2").show();
+        $("#preview2").append("<a class='txtSmall rgt' onclick='AutoCompleteTextbox._testingPgattchmentdownload( " + filepath + ");' target='_blank' style='cursor:pointer;color:blue'>[ View Attachment ]</a>");
+        /*
         if (filepath != '') {
             $("#preview2").show();
             //filepath = Main.getSiteUrl() + "/Lists/Attachment/Attachments/" + filepath;
@@ -3415,7 +3430,7 @@ var teststepfortester = {
             $("#attDownload").removeAttr("href");
             $("#attDownload").hide();
         }
-
+        */
     },
 
 
