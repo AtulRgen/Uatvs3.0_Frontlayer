@@ -244,7 +244,7 @@ pageLoad:function()
     	}	
     	catch(ex)
     	{
-    		Main.showPrerequisites("Prerequisite to display Lync status icon");	
+    		//Main.showPrerequisites("Prerequisite to display Lync status icon");	
     	}	
     }
 	function onStatusChange(name,status,id) 
