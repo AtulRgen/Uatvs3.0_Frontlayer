@@ -296,7 +296,7 @@ var MultipleStakeHolderItem =
             var Len = (_inArray != undefined && _inArray != null && _inArray != '') ? _inArray.length : 0;
             var tr = ''; th = '';
             if (Len > 0) {
-                th += '<thead style="position: fixed;top:190px;"><tr><th><input type="checkbox"  id="chkSelectAllModal"/></th><th style="width:50px;padding-left:5px;" >UserId</th><th  style="width:150px;padding-left:5px;"> UserName </th><th  style="width:210px;padding-left:5px;"> Email-Id</th></tr></thead>'
+                th += '<thead style="position: fixed;top:190px;margin-left:2px"><tr><th><input type="checkbox"  id="chkSelectAllModal"/></th><th style="width:50px;padding-left:5px;" >UserId</th><th  style="width:150px;padding-left:5px;"> UserName </th><th  style="width:210px;padding-left:5px;"> Email-Id</th></tr></thead>'
                 tr += '<tbody>'
                 for (var i = 0; i < _inArray.length; i++) {
                     tr += '<tr><td><input onchange="MultipleStakeHolderItem.EnableDisableBtn(this);" type="checkbox"/></td><td style="width:50px;padding-left:5px;" >' + _inArray[i].UserId + '</td><td style="width:150px;padding-left:5px;" >' + _inArray[i].UserName + '</td><td style="width:210px;padding-left:5px;">' + _inArray[i].Email + '</td></tr>'
