@@ -2692,7 +2692,7 @@ var DashBoard = {
 
                     if ($.inArray('1', security.userType) != -1 || $.inArray('2', userAssoc) != -1 || ($.inArray('3', userAssoc) != -1) || $.inArray('5', userAssoc) != -1)//Modified for Stakeholder
                     {
-                        str += '<td title="' + testPassName + '"><a target="_blank" href="/TestPass?pid=' + projectID + '&tpid=' + testpassID + '&edit=1' + '>' + trimText(testPassName, 28) + '</a></td>'; //Code modified by Rajiv on 23 feb 2012
+                        str += '<td title="' + testPassName + '"><a target="_blank" href=/TestPass?pid=' + projectID + '&tpid=' + testpassID + '&edit=1' + '>' + trimText(testPassName, 28) + '</a></td>'; //Code modified by Rajiv on 23 feb 2012
 
                         DashBoard.showTriageForTPID[testpassID] = "Yes";
                     }
@@ -2729,7 +2729,7 @@ var DashBoard = {
 
                     if ($.inArray('1', security.userType) != -1 || $.inArray('2', userAssoc) != -1 || ($.inArray('3', userAssoc) != -1) || $.inArray('5', userAssoc) != -1)//Modified for Stakeholder
                     {
-                        str += '<td title="' + testPassName + '"><a target="_blank" href="/TestPass?pid=' + projectID + '&tpid=' + testpassID + '&edit=1' + '>' + trimText(testPassName, 32) + '</a></td>'; //Code modified by Rajiv on 23 feb 2012
+                        str += '<td title="' + testPassName + '"><a target="_blank" href=/TestPass?pid=' + projectID + '&tpid=' + testpassID + '&edit=1' + '>' + trimText(testPassName, 32) + '</a></td>'; //Code modified by Rajiv on 23 feb 2012
 
                         DashBoard.showTriageForTPID[testpassID] = "Yes";
                     }
