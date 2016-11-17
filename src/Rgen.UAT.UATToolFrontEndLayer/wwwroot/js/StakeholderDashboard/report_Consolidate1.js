@@ -1819,18 +1819,18 @@ var report2 = {
                             if (status == "All")
                                 showFlag = 1;
                             else {
-                               // var max = new Date((report2.maxDate).replace(/\-/g, '/'));
-                                //var min = new Date((report2.minDate).replace(/\-/g, '/'));
+                               /* var max = new Date((report2.maxDate).replace(/\-/g, '/'));
+                                var min = new Date((report2.minDate).replace(/\-/g, '/'));*/
 
-                                var max = new Date((report2.maxDate));
-                                var min = new Date((report2.minDate));
+                                var max = (report2.maxDate);
+                                var min = (report2.minDate);
 
                                 if (testCaseItems2[mm]['DateTimeForFailedStep'] != undefined)
-                                    var compDate = new Date(testCaseItems2[mm]['DateTimeForFailedStep'].replace("- ", ""));
+                                    var compDate =testCaseItems2[mm]['DateTimeForFailedStep'];
                                 else
-                                    // var compDate = new Date((testCaseItems2[mm]['modified']).replace(/\-/g, '/'));
+                                    /* var compDate = new Date((testCaseItems2[mm]['modified']).replace(/\-/g, '/'));*/
                                     var compDate = testCaseItems2[mm]['modified'];
-                                if (compDate <= max && compDate >= min)//&& testCaseItems2[mm]['Modified']!=testCaseItems2[mm]['Created']
+                                if (compDate <= max && compDate >= min)/*&& testCaseItems2[mm]['Modified']!=testCaseItems2[mm]['Created']*/
                                 {
                                     if (status == "Executed" && testCaseItems2[mm]['status'] != "Not Completed" && testCaseItems2[mm]['status'] != "Pending" && testingFlag == 0)
                                         showFlag = 1;
