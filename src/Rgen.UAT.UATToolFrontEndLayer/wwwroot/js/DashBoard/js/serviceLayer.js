@@ -9,6 +9,7 @@ $.ajaxSetup({
     // Disable caching of AJAX responses
     cache: false
 
+
 });
 var r = window.location.href.split('/');
 var FrontEndUrl = r[0] + "//" + r[2];
@@ -323,7 +324,7 @@ var ServiceLayer = {
         window.open(url, "_blank");
     },
     downloadFromAttachmentPg: function (param) {
-        var url = ServiceLayer.serviceURL + '/Attachment/GetFileToDownload?id=' + param + "&" + $.now();
+        var url = ServiceLayer.serviceURL + '/Attachment/GetFileToDownload?id=' + param + '&Url=' + ServiceLayer.appurl;
         //window.location.assign(url);
         var win = window.open(url, "_blank");
         win.focus();
